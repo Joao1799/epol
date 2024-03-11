@@ -1,0 +1,26 @@
+<div class="card">
+    <p-table [value]="products" [(selection)]="selectedProducts3" dataKey="code">
+        <ng-template pTemplate="header" >
+            <tr>
+                <th style="width: 3rem" class="header">
+            
+                </th>
+                <th>N. do bem</th>
+                <th>Tipo do bem</th>
+                <th>Quantidade/Unidade</th>
+                <th>Descrição/Observação</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                </td>
+                <td>{{product.Ne}}</td>
+                <td>{{product.Tpbem}}</td>
+                <td>{{product.QuntUni}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
